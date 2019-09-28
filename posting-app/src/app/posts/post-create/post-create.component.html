@@ -1,0 +1,28 @@
+<div class="container-fluid">
+<div class= "form-card mx-auto" [class.view-height]="imagePreview.length==0">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form [formGroup]="form" *ngIf="!isLoading" class="mt-5">
+    <mat-form-field>
+      <textarea matInput rows="2" formControlName="title" placeholder="TITLE:"></textarea>
+      <mat-error *ngIf="form.get('title').invalid">Enter a title</mat-error>
+    </mat-form-field>
+    <button type="button" class="button-image bg-dark text-white mt-2 " (click)="file_.click()">Add Image</button>
+    <input type='file' #file_ (change)="onImageHandler($event)" accept="image/*" multiple>
+    <div class="row ">
+    <div class="col col-xl-4 col-6 mt-2 mt-md-2 text-center" *ngFor="let image of imagePreview; let i = index">
+      <img [src]="image" [alt]="form.value.title"
+        *ngIf="imagePreview.length!==0&&imagePreview">
+      <i class="material-icons float-right" (click)="onRemove(i)">clear</i>
+    </div>
+    </div>
+    <mat-error *ngIf= "!isSelected">Image Missing</mat-error>
+    <mat-error *ngIf= "!isvalid">Ivalid File Input</mat-error>
+    <mat-form-field>
+      <textarea matInput rows="4" formControlName="content" placeholder="CONTENT:"></textarea>
+      <mat-error *ngIf="form.get('content').invalid">Enter content</mat-error>
+    </mat-form-field>
+    <button (click)="onAddPost()"  class="submit-button bg-dark text-white">ADD POST
+    </button>
+  </form>
+</div>
+</div>

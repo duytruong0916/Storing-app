@@ -1,0 +1,64 @@
+.container-fluid{
+  position: relative;
+  margin-top: -20px;
+  height: 100vh;
+  background-image: url("src\assets\home.jpg");
+  background-size:cover;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.message{
+  color:rgba(255, 255, 255, 0.877);
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: 1s;
+}
+.sign-in{
+  color:black;
+  margin:auto;
+  border: 1px black solid;
+  text-align: center;
+  transition: 1s;
+}
+
+@media screen and (min-width: 990px){
+  .message{
+    font-size: 50px;
+    padding-top: 70px;
+  }
+  .sign-in{
+    width: 25%;
+    font-size: 40px;
+    margin-top: 50px;
+    padding: 10px 15px;
+
+  }
+  .sign-in:hover{
+    color: white;
+    border: 1px white solid;
+    cursor: pointer;
+    width: 40%;
+  }
+}
+@media screen and (max-width: 990px){
+  .message{
+    font-size: 25px;
+    padding-top: 50px;
+  }
+
+  .sign-in{
+    width: 40%;
+    font-size: 15px;
+    margin-top: 50px;
+    padding: 15px 25px;
+  }
+  .sign-in:hover{
+    color: white;
+    border: 1px white solid;
+    cursor: pointer;
+    width: 50%;
+  }
+
+}

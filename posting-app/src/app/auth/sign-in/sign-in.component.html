@@ -1,0 +1,27 @@
+<div class="container-fluid">
+<mat-card>
+  <h3 class="d-md-block d-none mt-4">Time To Log In!</h3>
+  <h3 class="d-md-none d-block mt-4">Log In!</h3>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form [formGroup]="form" *ngIf="!isLoading">
+    <mat-form-field>
+      <input matInput rows="2" formControlName="email" placeholder="Email address *">
+      <mat-error *ngIf="form.get('email').invalid">Email is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" formControlName="password" placeholder="Password *">
+      <mat-error *ngIf="form.get('password').invalid">Password is required</mat-error>
+    </mat-form-field>
+    <mat-error *ngIf="isInvalid">Invalid Email or Password</mat-error>
+    <div>
+      <button (click)="onloginHandler() " class="button-login mt-3 bg-dark text-white">LOG IN
+      </button>
+    </div>
+    <div>
+      <button [routerLink]="['/auth/sign-up']" routerLinkActive="router-link-active"
+        class="button-create  mt-3 bg-dark text-white">CREATE AN ACCOUNT
+      </button>
+    </div>
+  </form>
+</mat-card>
+</div>

@@ -1,0 +1,75 @@
+.container-fluid{
+  margin-top: -20px;
+  background-image: url("src\assets\1-11764_3d-wallpaper-hd-for-laptop-pretty-butterfly-pictures.jpg");
+  background-repeat: repeat-y;
+}
+
+.form-card{
+background-color: white;
+font-family: 'Montserrat', sans-serif;
+border: rgba(0, 0, 0, 0.637) 0.5px outset;
+}
+.view-height{
+  height:100vh;
+}
+mat-form-field {
+margin:auto;
+display: block;
+position: relative;
+width:80%;
+margin-top: 10px;
+}
+mat-spinner{
+margin: auto;
+}
+input{
+visibility: hidden;
+}
+
+.button-image{
+margin: auto;
+display: block;
+position: relative;
+padding: 5px;
+width: 30%;
+font-size: 12px
+}
+.submit-button{
+margin: auto;
+display: block;
+position: relative;
+width: 60%;
+padding: 5px;
+font-size: 12px;
+margin-bottom: 100px;
+}
+.row{
+padding:10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .form-card{
+    width:80%;
+
+  }
+  img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  }
+  @media screen and (min-width: 768px) {
+  .form-card{
+     width:60%;
+    }
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+  }
+

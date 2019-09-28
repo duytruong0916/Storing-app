@@ -1,0 +1,77 @@
+
+@media screen and (max-width: 768px) {
+  .post{
+    width:80%;
+  }
+  img{
+    width: 95%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+  @media screen and (min-width: 768px) {
+    .post{
+      width:60%;
+
+    }
+    img{
+      width: 90%;
+      height: 250px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+  }
+.container-fluid{
+  margin-top: -30px;
+  background-image: url("src\assets\1-11764_3d-wallpaper-hd-for-laptop-pretty-butterfly-pictures.jpg");
+  background-repeat: repeat-x;
+  height: 100vh;
+  overflow: auto;
+}
+.container-fluid::-webkit-scrollbar {
+  display: none;
+}
+.post{
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  border: rgba(0, 0, 0, 0.336) 0.5px outset;
+  position: relative;
+  padding: 10px;
+
+}
+.title{
+  font-size: 20px;
+  font-weight: bolder;
+  color:black;
+}
+.content-text{
+  word-wrap: break-word;
+  text-justify: auto;
+  text-indent: 30px;
+  font-style: italic;
+  padding: 10px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.delete-bt{
+  background-color: white;
+  color:red;
+  font-size: 12px;
+  border: none;
+  font-weight: bolder;
+
+}
+.edit-bt{
+  background-color: white;
+  color:blue;
+  font-size: 12px;
+  border: none;
+  font-weight: bolder;
+
+}
+.edit-bt:hover, .delete-bt:hover{
+  background-color: rgb(196, 212, 226);
+}

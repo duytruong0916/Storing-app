@@ -1,0 +1,70 @@
+@media screen and (max-width: 990px) {
+  .message {
+    font-size: 25px;
+  }
+  .fa-star {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .fa-star {
+    font-size: 60px;
+  }
+  .nav-item {
+    margin-left: 70px;
+    padding: 0px 10px;
+  }
+  .message {
+    font-size: 25px;
+  }
+}
+.navbar-brand{
+  outline: none;
+  cursor: pointer;
+}
+.navbar {
+  background-color: black;
+  height: auto;
+}
+.message {
+  font-style: italic;
+  color: rgb(197, 126, 45);
+}
+.nav-item {
+  color: rgba(255, 255, 255, 0.301);
+  font-size: 18px;
+  outline: none;
+  padding: 10px;
+}
+
+.nav-item:hover {
+  color: white;
+  font-size: 18.5px;
+  cursor: pointer;
+}
+.active-link {
+  color: white;
+  font-size: 18.5px;
+}
+.fa-star {
+  animation: rotate 2s infinite;
+  color: rgb(99, 99, 189);
+
+}
+hr {
+  background-color: white;
+  color: white;
+}
+button{
+  color:rgb(99, 99, 189);
+  outline: none;
+  font-size: 40px;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
